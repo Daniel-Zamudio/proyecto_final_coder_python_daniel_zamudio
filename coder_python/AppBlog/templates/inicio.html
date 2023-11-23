@@ -1,0 +1,46 @@
+{% extends "./padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        position: relative;
+        background-color: #e79325;
+        background-size: cover;
+        padding-bottom: 8rem;
+    } 
+</style>
+<body>
+<header>
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="text-center text-danger mt-5">
+                    <h1>Un humilde Blog de...</h1>
+                </div>
+                <div class="text-center text-black mt-5">
+                    <h1 class="mt-5">Artes marciales y deportes de contacto</h1>
+                    <h4 class="mt-5">(Proyecto final - Python Flex -Coder House)</h4>
+
+                    <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
+
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">Form submission successful!</div>
+                                <p>To activate this form, sign up at</p>
+                                <a class="text-white" href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            </div>
+                        </div>
+
+                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+</body>
+{% endblock contenidoQueCambia %}

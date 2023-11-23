@@ -1,0 +1,21 @@
+{% extends "./padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        position: relative;
+        background-color: #e79325;
+        background-size: cover;
+        padding-bottom: 8rem;
+    } 
+</style>
+<h1>Agregar Post</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Crear Post</button>
+</form>
+{% endblock contenidoQueCambia %}

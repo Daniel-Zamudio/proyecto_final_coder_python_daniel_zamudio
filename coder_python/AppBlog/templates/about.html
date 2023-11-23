@@ -1,0 +1,93 @@
+{% extends "./padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #e79325;
+                color: #333;
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                background-color: black;
+                color: #fff;
+                padding: 20px;
+                margin-top: 20px;
+                margin-left: 20px;
+                text-align: left;
+                max-width: 800px;
+                border-radius: 20px;
+            }
+
+            section {
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: black;
+                color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 20px;
+            }
+
+            h2 {
+                color: red;
+            }
+            h3 {
+                color: green;
+            }
+
+            p {
+                line-height: 1.6;
+            }
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <h1>dev.zamu</h1>
+            <h6>(Daniel Zamudio)</h6>
+        </header>
+
+        <section>
+            <h2>¿Quien soy?</h2>
+            <p>Soy Daniel. Tengo 42 años. Vivo en Lomas de Zamora, provincia de Buenos Aires. Estoy casado y tengo 2 hijos.
+                Soy desarrollador front end, con REACT.<br/>
+                Tengo 2 pasiones...
+            </p>
+        </section>
+
+        <section>
+            <h2>Programacion</h2>
+            <ul>
+                <li>En desarrollo Fron-end, tengo conocimientos de HTML, css,
+JavaScript, y su libreria REACT
+                </li>
+                <li>En desarrollo back-end tengo conocimientos básicos de PHP y Python, con su framework Django</li>
+                <li>Comocimientos básicos de SQL</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Artes marciales de deportes de contacto</h2>
+            <ul>
+                <li>Cinturon negro de JUDO</li>
+                <li>Cinturon marron de JIU JITSU</li>
+                <li>Boxeo hace muchos años</li>
+            </ul>
+        </section>
+        <header>
+            <h3>Proyecto Coder House</h3>
+            <p>
+                Este proyecto corresponde a la entrega final, del curso de Python (modalidad Flex) en Coder House.
+Intente combinar las 2 pasiones que comente.. la programación (el desarrollo del proyecto) y las artes marciales y deportes de contacto (el tema de los posts)
+Es una app, en la que se puede llevar a cabo el CRUD, de posts al estilo blog
+
+            </p>
+        </header>
+
+    </body>
+{% endblock contenidoQueCambia %}

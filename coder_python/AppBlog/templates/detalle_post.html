@@ -1,0 +1,33 @@
+{% extends "./padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        position: relative;
+        background-color: #e79325;
+        background-size: cover;
+        padding-bottom: 8rem;
+    } 
+</style>
+<body>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <article>
+                <header class="mb-4">
+                    <h1 class="fw-bolder mb-1">{{post.articulo}}</h1>
+                    <div class="fst-italic mb-2">Posteado el {{post.fecha}} por {{post.autor}}</div>
+                </header>
+                <a href=""><img class="card-img-top" src="{{ post.imagen.url }}" alt="" style="max-width: 50%;" /></a>
+                <section class="mb-5">
+                    <p class="fs-5 mb-4">{{post.texto}}</p>
+                </section>
+            </article>
+    <p>
+        <a href="{% url 'post_list' %}">Volver a la lista de Posts</a>
+    </p>
+</body>
+{% endblock contenidoQueCambia %}

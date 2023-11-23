@@ -1,0 +1,24 @@
+{% extends "./padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        position: relative;
+        background-color: #e79325;
+        background-size: cover;
+        padding-bottom: 8rem;
+    } 
+</style>
+    <h1>Editar Post</h1>
+    <body>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar Cambios</button>
+    </form>
+    <a href="{% url 'post_list' %}">Volver a la lista de posts</a>
+    </body>
+{% endblock contenidoQueCambia %}

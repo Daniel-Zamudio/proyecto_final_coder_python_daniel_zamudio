@@ -1,0 +1,27 @@
+{% extends "./padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        position: relative;
+        background-color: #e79325;
+        background-size: cover;
+        padding-bottom: 8rem;
+    } 
+</style>
+    <h2>Editar perfil de {{usuario}} {{imagen}}</h2>
+
+    <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+        <table>
+            {{mi_formulario}}
+        </table>
+
+        <input type="submit", value="Enviar">
+    </form>
+    <button type="button">
+        <a class="navbar-brand" href="{% url 'CambiarContraseña' %}">Cambiar Contraseña</a>
+    </button>
+{% endblock contenidoQueCambia %}
